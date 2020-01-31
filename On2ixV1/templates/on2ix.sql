@@ -32,9 +32,7 @@ CREATE TABLE `bijoux` (
 	`taille` float(20) NOT NULL,
 	`purete` varchar(5) ,
 	`codeArticle` varchar(255) NOT NULL,
-	CONSTRAINT PK_bijoux PRIMARY KEY(id),
-	--ADD CONSTRAINT CHK_genre CHECK(`genre`= `M` OR `genre`=`F`),
-	--ADD CONSTRAINT CHK_purete CHECK(`purete`=`SI1`OR `purete`=`VS2`);
+	CONSTRAINT PK_bijoux PRIMARY KEY(id)
 );
 
 --
