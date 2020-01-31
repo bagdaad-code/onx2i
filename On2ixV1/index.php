@@ -42,17 +42,49 @@ Les formulaires de toutes les vues générées enverront leurs données vers la 
 		case "accueil" : 
 			include("templates/accueil.php");
 		break;
-		case "sericeClient" : 
+			
+		case "article" : 
+			include("templates/article.php");
+		break;
+			
+		case "bague" : 
+			include("templates/bague.php");
+		break;
+			
+		case "facture" : 
+			include("templates/facture.php");
+		break;
+			
+		case "favoris" : 
+			include("templates/favoris.php");
+		break;
+			
+		case "footer" : 
+			include("templates/footer.php");
+		break;
+			
+		case "header" : 
+			include("templates/header.php");
+		break;
+			
+		case "login" : 
+			include("templates/login.php");
+		break;
+			
+		case "panier" : 
+			include("templates/panier.php");
+		break;
+			
+		case "quiSommesNous" : 
+			include("templates/quiSommesNous.php");
+		break;
+			
+		case "serviceClient" : 
 			include("templates/serviceClient.php");
 		break;
-		case "accueil" : 
-			include("templates/accueil.php");
-		break;
-		case "accueil" : 
-			include("templates/accueil.php");
-		break;
-		case "accueil" : 
-			include("templates/accueil.php");
+			
+		case "surMesure" : 
+			include("templates/surMesure.php");
 		break;
 		
 
