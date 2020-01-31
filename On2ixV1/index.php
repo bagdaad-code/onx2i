@@ -59,14 +59,6 @@ Les formulaires de toutes les vues générées enverront leurs données vers la 
 			include("templates/favoris.php");
 		break;
 			
-		case "footer" : 
-			include("templates/footer.php");
-		break;
-			
-		case "header" : 
-			include("templates/header.php");
-		break;
-			
 		case "login" : 
 			include("templates/login.php");
 		break;
