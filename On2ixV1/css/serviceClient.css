@@ -1,3 +1,13 @@
+p{
+text-align:center;
+}
+
+img{
+height:5vh;
+display:flex;
+align-items:center;
+}
+
 .titre{
 display:flex;
 justify-content:center;
