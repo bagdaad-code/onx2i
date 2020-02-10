@@ -1,0 +1,41 @@
+.maNav
+{
+  background-color: #b6a573;
+}
+
+.barre
+{
+  display: flex;
+  justify-content: center;
+}
+
+.nav-item:hover
+{
+  background-color: #555;
+}
+
+.btn
+{
+  background-color: #555;
+}
+
+ul
+{
+  margin-left: 10%;
+}
+
+.barreSearch
+{
+  width: 100%;
+}
+
+.butLoupe
+{
+  margin-right: 10%;
+  width: 10%;
+}
+
+#loupe
+{
+  width: 100%;
+}
