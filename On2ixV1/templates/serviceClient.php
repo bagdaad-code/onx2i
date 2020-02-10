@@ -32,6 +32,7 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php")
 	  </div>
 	  <div class="top">
 		  <div class="top-left">
+			  <img src="images/mail3.webp">
 			  <h2 class="sous-titre">Nous envoyer un mail</h2>
 			  <div class="cadre">
 				  <p>Démarrez une conversation pour recevoir de 
