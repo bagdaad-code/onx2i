@@ -31,6 +31,7 @@ CREATE TABLE `bijoux` (
 	`genre` char(1) ,
 	`taille` float(20) NOT NULL,
 	`purete` varchar(5) ,
+	`source` varchar(255) NOT NULL,
 	`codeArticle` varchar(255) NOT NULL,
 	CONSTRAINT PK_bijoux PRIMARY KEY(id)
 );
