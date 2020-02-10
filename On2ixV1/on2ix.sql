@@ -179,4 +179,6 @@ ALTER TABLE `image`
   
   
   
-  INSERT INTO `bijoux` (`id`, `titre`, `popularite`, `prix`, `poids`, `alliage`, `pierre`, `genre`, `taille`, `purete`, `source`, `codeArticle`) VALUES ('1', 'Bague solitaire or blanc', '0', '1116', '3.70', 'or blanc', 'rond', 'F', '7.60', '0,30', '/ressources/images/0,30_carat_bague_solitaire_or_blanc_1.jpng', '0,30 carat bague solitaire or blanc Bague 1');
+INSERT INTO `bijoux` (`id`, `titre`, `popularite`, `prix`, `poids`, `alliage`, `pierre`, `genre`, `taille`, `purete`, `source`, `codeArticle`) VALUES
+(1, 'Bague solitaire or blanc', 0, 1116, 3.7, 'or blanc', 'rond', 'F', 7.6, '0,30', 'ressources/images/0,30_carat_bague_solitaire_or_blanc_1.png', '0,30 carat bague solitaire or blanc Bague 1'),
+(2, 'Bague solitaire or jaune', 0, 1272, 3.7, 'or jaune', 'rond', 'F', 7.6, '0,30', '/ressources/images/0,30_carat_bague_solitaire_or_jaune_1.png', '0,30 carat bague solitaire or jaune Bague 1');
