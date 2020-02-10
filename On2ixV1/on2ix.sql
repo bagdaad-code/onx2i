@@ -176,3 +176,7 @@ ALTER TABLE `archive`
 --
 ALTER TABLE `image`
   ADD CONSTRAINT `FK_image` FOREIGN KEY (`idBijoux`) REFERENCES `bijoux` (`id`) ;
+  
+  
+  
+  INSERT INTO `bijoux` (`id`, `titre`, `popularite`, `prix`, `poids`, `alliage`, `pierre`, `genre`, `taille`, `purete`, `source`, `codeArticle`) VALUES ('1', 'Bague solitaire or blanc', '0', '1116', '3.70', 'or blanc', 'rond', 'F', '7.60', '0,30', '/ressources/images/0,30_carat_bague_solitaire_or_blanc_1.jpng', '0,30 carat bague solitaire or blanc Bague 1');
