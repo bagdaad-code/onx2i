@@ -82,7 +82,7 @@ CREATE TABLE `commande` (
 	`pays` float(50) NOT NULL,
 	`telephone` varchar(15) NOT NULL,
      `PrixTotal` float(50) NOT NULL,
-	 `images` varchar(50) NOT NULL,
+	 `image` varchar(50) NOT NULL,
 	`remarques` varchar(255) NOT NULL,
 	CONSTRAINT PK_commande PRIMARY KEY(id)
 );
@@ -97,6 +97,17 @@ CREATE TABLE `archive` (
   `idCommande` int(11)  NOT NULL
 
 );
+--
+-- Structure de la table `image`
+--
+
+CREATE TABLE `image` (
+  `source` varchar(255) NOT NULL,
+  `idBijoux` int(11)  NOT NULL
+
+);
+
+
 --
 -- AUTO_INCREMENT pour les tables exportées
 --
@@ -130,33 +141,37 @@ ALTER TABLE `commande`
 -- Contraintes pour la table `panier`
 --
 ALTER TABLE `panier`
-  ADD CONSTRAINT `FK_panier_user` FOREIGN KEY (`idUser`) REFERENCES `users` (`id`) ON DELETE CASCADE;
+  ADD CONSTRAINT `FK_panier_user` FOREIGN KEY (`idUser`) REFERENCES `users` (`id`) ;
 ALTER TABLE `panier`
-  ADD CONSTRAINT `FK_panier_bijoux` FOREIGN KEY (`idBijoux`) REFERENCES `bijoux` (`id`) ON DELETE CASCADE;
+  ADD CONSTRAINT `FK_panier_bijoux` FOREIGN KEY (`idBijoux`) REFERENCES `bijoux` (`id`) ;
 
 --
 -- Contraintes pour la table `favoris`
 --
 ALTER TABLE `favoris`
-  ADD CONSTRAINT `FK_favoris_users` FOREIGN KEY (`idUser`) REFERENCES `users` (`id`) ON DELETE CASCADE;
+  ADD CONSTRAINT `FK_favoris_users` FOREIGN KEY (`idUser`) REFERENCES `users` (`id`) ;
 ALTER TABLE `favoris`
-  ADD CONSTRAINT `FK_favoris_bijoux` FOREIGN KEY (`idBijoux`) REFERENCES `bijoux` (`id`) ON DELETE CASCADE;
+  ADD CONSTRAINT `FK_favoris_bijoux` FOREIGN KEY (`idBijoux`) REFERENCES `bijoux` (`id`) ;
 
 --
 -- Contraintes pour la table `commande`
 --
 ALTER TABLE `commande`
-  ADD CONSTRAINT `FK_commande_users` FOREIGN KEY (`idUser`) REFERENCES `users` (`id`) ON DELETE CASCADE;
+  ADD CONSTRAINT `FK_commande_users` FOREIGN KEY (`idUser`) REFERENCES `users` (`id`);
 
 --
 -- Contraintes pour la table `archive`
 --
 ALTER TABLE `archive`
-  ADD CONSTRAINT `FK_archive_users` FOREIGN KEY (`idUser`) REFERENCES `users` (`id`) ON DELETE CASCADE;
+  ADD CONSTRAINT `FK_archive_users` FOREIGN KEY (`idUser`) REFERENCES `users` (`id`);
 ALTER TABLE `archive`
-  ADD CONSTRAINT `FK_archive_bijoux` FOREIGN KEY (`idBijoux`) REFERENCES `bijoux` (`id`) ON DELETE CASCADE;
+  ADD CONSTRAINT `FK_archive_bijoux` FOREIGN KEY (`idBijoux`) REFERENCES `bijoux` (`id`) ;
 ALTER TABLE `archive`
-  ADD CONSTRAINT `FK_archive_commande` FOREIGN KEY (`idCommande`) REFERENCES `commande` (`id`) ON DELETE CASCADE;
+  ADD CONSTRAINT `FK_archive_commande` FOREIGN KEY (`idCommande`) REFERENCES `commande` (`id`);
 
 
-
+--
+-- Contraintes pour la table `image`
+--
+ALTER TABLE `image`
+  ADD CONSTRAINT `FK_image` FOREIGN KEY (`idBijoux`) REFERENCES `bijoux` (`id`) ;
