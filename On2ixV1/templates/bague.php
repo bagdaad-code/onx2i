@@ -5,7 +5,6 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php")
 	die("");
 }
 ?>
-//tripoids  pierre?
 <h2 id=titre >azert</h2>
 <p id="err">Aucune bague disponible avec ces critères </p>
 <div class="tri">
