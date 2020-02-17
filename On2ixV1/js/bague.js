@@ -1,0 +1,233 @@
+/*---------------------Variable globale---------------------------*/
+var apiRoot = "http://localhost/on2ix/api";
+var listeBaguesPossible=[];
+var listeBaguesAffichee=[];
+var dejaTri=false;
+/*------------------------Declachement lorsque la page est chargé---------------------------------------*/
+$(document).ready(function(){
+  $("#titre").html("Bienvenue Dans La Galerie de vos Bagues");
+  listerBagues();
+  $('#err').hide();
+});
+/*-----------Declachement au click-------------------*/
+$(document).on('click', '.option', triSelectBagues);
+$(document).on('click', '.checkalliage', triButtonBagues);
+$(document).on('click', '.checkgenre', triCheckBagues);
+$(document).on('change', '.selectPrix', triPrixBagues);
+$(document).on('change', '.selectCarat', triCaratBagues);
+/*----------afficherBagues----------*/
+//permet d'afficher les bagues
+function afficherBagues(){
+  $("#bague").html("");
+
+  dejaTri=false;
+  for (var i in listeBaguesPossible) {
+    var div=$("<div>")
+    var h3=$("<h3>")
+    var img=$("<img>")
+    var p=$("<p>")
+    div.attr({"id":listeBaguesPossible[i].id,"class":"bagues"});
+    img.attr("src",listeBaguesPossible[i].source);
+    p.text("a partir de "+listeBaguesPossible[i].prix+" €");
+    h3.html(listeBaguesPossible[i].titre);
+    div.append(img)
+    div.prepend(h3);
+    div.append(p);
+    $("#bague").append(div);
+  }
+}
+/*----------afficherBaguesTri----------*/
+//permet d'afficher les bagues suite a un tri
+function afficherBaguesTri(criTri,tripar1,tripar2,info){
+  var nb=0;
+  if (dejaTri) {
+    listeBaguesAAfficher=listeBaguesAffichee;
+  }else {
+    listeBaguesAAfficher=listeBaguesPossible
+  }
+  for (var i in listeBaguesPossible) {
+    var div=$("<div>")
+    var h3=$("<h3>")
+    var img=$("<img>")
+    var p=$("<p>")
+    if (info=="test") {
+      if (listeBaguesPossible[i][criTri]==tripar1) {
+            listeBaguesAffichee.push(listeBaguesPossible[i]);
+        nb++;
+        div.attr({"id":listeBaguesPossible[i].id,"class":"bagues"});
+        img.attr("src",listeBaguesPossible[i].source);
+        p.text("a partir de "+listeBaguesPossible[i].prix+" €");
+        h3.html(listeBaguesPossible[i].titre);
+        div.append(img)
+        div.prepend(h3);
+        div.append(p);
+        $("#bague").append(div);
+      }
+    }
+    if (info=="entre") {
+      if (tripar1<=parseFloat(listeBaguesPossible[i][criTri]) && parseFloat(listeBaguesPossible[i][criTri]) <= tripar2){
+            listeBaguesAffichee.push(listeBaguesPossible[i]);
+        nb++;
+        div.attr({"id":listeBaguesPossible[i].id,"class":"bagues"});
+        img.attr("src",listeBaguesPossible[i].source);
+        p.text("a partir de "+listeBaguesPossible[i].prix+" €");
+        h3.html(listeBaguesPossible[i].titre);
+        div.append(img)
+        div.prepend(h3);
+        div.append(p);
+        $("#bague").append(div);
+      }
+    }
+  }
+
+  return nb;
+}
+/*----------CacherBaguesTri----------*/
+//permet de cacher les bagues suite a un tri par genre
+function CacherBaguesTri(genre){
+  for (var i in listeBaguesPossible) {
+    if (listeBaguesPossible[i].genre==genre) {
+    var id=listeBaguesPossible[i].id;
+      $("#"+id).remove();
+    }
+  }
+}
+/*-------------listerBijoux---------------*/
+//permet de lister les bijoux Sans aucun filtre
+function listerBagues() {
+  $.ajax({
+		type: "GET",
+		// GET /api/bijoux
+		url: apiRoot + "/bijoux",
+		headers: {"debug-data":true},
+		success: function(oRep){
+      console.log(oRep.bijoux);
+      listeBaguesPossible=oRep.bijoux;
+      afficherBagues();
+		},
+    error:function(oRep){
+      console.log(oRep);
+		},
+		dataType: "json"
+	});
+}
+/*-------------triSelectBagues---------------*/
+//permet de lister les bijoux avec un filtre Select
+function triSelectBagues (){
+  var tripar=$("#tri").children(":selected").attr("id");
+  $.ajax({
+    type: "GET",
+    // GET /api/select?tri=...
+    url: apiRoot + "/select?tri="+tripar,
+    headers: {"debug-data":true},
+    success: function(oRep){
+      listeBaguesPossible=oRep.bijoux;
+          afficherBagues();
+    },
+    error:function(oRep){
+      console.log(oRep);
+    },
+    dataType: "json"
+  });
+}
+/*-------------triButtonBagues---------------*/
+//permet de lister les bijoux avec un filtre button
+function triButtonBagues (){
+  var nb;
+
+  if (this.id=="raz") {
+      listerBagues();
+  } else {
+           $("#bague").html("");
+    nb=afficherBaguesTri("alliage",this.id,0,"test");
+    console.log(nb);
+    if (nb==0) {
+      listerBagues();
+			$("#err").show();
+			setTimeout(function () {
+				$("#err").hide();
+			}, 1000);
+    }
+  }
+}
+/*-------------triCheckBagues---------------*/
+//permet de afficher ou cacher les bijoux selon le sexe choisi
+function triCheckBagues(){
+var nb;
+console.log(!$("#F").is(":checked"));
+console.log(!$("#M").is(":checked"));
+console.log(!$("#U").is(":checked"));
+if (!$("#F").is(":checked") && !$("#M").is(":checked") && !$("#U").is(":checked"))
+afficherBagues();
+
+  if (this.checked) {
+    if ($("#F").is(":checked") && $("#M").is(":checked") ||
+        $("#F").is(":checked") && $("#U").is(":checked") ||
+        $("#M").is(":checked") && $("#U").is(":checked")){
+          nb=afficherBaguesTri("genre",this.id,0,"test")
+        if (nb==0) {
+            $("#err").show();
+            setTimeout(function () {
+              $("#err").hide();
+
+            }, 1000);
+             $("#"+this.id).prop('checked', false);
+          }
+        }
+        else {
+       $("#bague").html("");
+       nb=afficherBaguesTri("genre",this.id,0,"test")
+       if (nb==0) {
+         listerBagues();
+         $("#"+this.id).prop('checked', false);
+         $("#err").show();
+         setTimeout(function () {
+           $("#err").hide();
+         }, 1000);
+       }
+        }
+
+  }else {
+    if (!$("#F").is(":checked")) CacherBaguesTri("F");
+    if (!$("#M").is(":checked")) CacherBaguesTri("M");
+    if (!$("#U").is(":checked")) CacherBaguesTri("U");
+    if (!$("#F").is(":checked") && !$("#M").is(":checked") && !$("#U").is(":checked"))
+    afficherBagues();
+  }
+}
+/*-------------triPrixBagues---------------*/
+//permet de afficher ou cacher les bijoux selon la tranche de prix choisi
+function triPrixBagues(){
+  var nb;
+  var min=parseFloat( $("#selectPrixMin").children(":selected").val() );
+  var max=parseFloat( $("#selectPrixMax").children(":selected").val() );
+  $("#bague").html("");
+  nb=afficherBaguesTri("prix",min,max,"entre")
+  if (nb==0) {
+    listerBagues();
+    var min= $("#selectPrixMin").children("#"+0).attr("selected");
+    var max= $("#selectPrixMax").children("#"+50000).attr("selected");
+    $("#err").show();
+    setTimeout(function () {
+      $("#err").hide();
+    }, 1000);
+  }
+
+}
+/*-------------triCaratBagues---------------*/
+//permet de afficher ou cacher les bijoux selon la tranche de carat choisi
+function triCaratBagues(){
+  var nb;
+  var min=parseFloat( $("#selectCaratMin").children(":selected").val() );
+  var max=parseFloat( $("#selectCaratMax").children(":selected").val() );
+  $("#bague").html("");
+  nb=afficherBaguesTri("purete",min,max,"entre")
+  if (nb==0) {
+    listerBagues();
+    $("#err").show();
+    setTimeout(function () {
+      $("#err").hide();
+    }, 1000);
+  }
+
+}
