@@ -2,57 +2,26 @@ p{
 text-align:center;
 }
 
-img{
-height:5vh;
-display:flex;
-align-items:center;
+.divImg{
+  display:flex;
+  justify-content:center;
 }
-
 .titre{
 display:flex;
 justify-content:center;
 }
 
+.imgCover{
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+display:flex;
+justify-content:left;
+min-height:200px;
+
+}
 .au-dessus{
-background-color: green;
-height:80%;
-}
-
-.bot{
-width:100%;
-height:40vh;
-background-color: lightblue;
-}
-
-.top{
-width:100%;
-height:40vh;
-background-color: blue;
-
-}
-
-.top-left{/*Nous envoyer un mail*/
-/*background-color: purple;*/
-float:left;
-width:47.5%;
-}
-
-.top-right{/* appeler*/
-/*background-color: red;*/
-float:right;
-width:47.5%;
-}
-
-.bot-left{/*support chat*/
-/*background-color: orange;*/
-float:left;
-width:47.5%;
-}
-
-.bot-right{/*whatsapp*/
-/*background-color: yellow;*/
-float:right;
-width:47.5%;
+margin-right:60%;
 }
 
 .sous-titre{
