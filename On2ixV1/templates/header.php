@@ -20,6 +20,7 @@ echo "<?xml version=\"1.0\" encoding=\"utf-8\" ?>";
 	<!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
 
 	<!-- Liaisons aux fichiers css de Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<link href="css/sticky-footer.css" rel="stylesheet"/>
 
@@ -54,15 +55,15 @@ echo "<?xml version=\"1.0\" encoding=\"utf-8\" ?>";
 
 
 			<div class="collapse navbar-collapse" id="navbarToggler">
-					<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+					<ul class="navbar-nav mr-auto mt-2 mt-lg-0 categories">
 			      <li class="nav-item active">
 			        <a class="nav-link" href="#">Accueil</a>
 			      </li>
 			      <li class="nav-item">
-			        <a class="nav-link" href="#">Bagues</a>
+			        <a class="nav-link lien" href="#">Bagues</a>
 			      </li>
 						<li class="nav-item">
-			        <a class="nav-link" href="#">Boucles d'oreilles</a>
+			        <a class="nav-link lien" href="#">Boucles d'oreilles</a>
 			      </li>
 			      <li class="nav-item">
 			        <a class="nav-link" href="#">Colliers</a>
@@ -94,9 +95,8 @@ echo "<?xml version=\"1.0\" encoding=\"utf-8\" ?>";
 		        </form>
 		    </div>
 
-			<button class="btn btn-lg"><span class="fa fa-shopping-cart"></span><br>Boutique</button>
+			<button class="btn btn-lg"><span class="fa fa-shopping-cart"></span>Boutique</button>
 
 
 		</nav>
   <!-- Begin page content -->
-  <div class="container">
