@@ -1,7 +1,14 @@
 
 
 <?php
-session_start();
+
+if (basename($_SERVER["PHP_SELF"]) != "index.php")
+{
+    header("Location:../index.php?view=facture");
+    die("");
+}
+
+
 
 /*
 Cette page génère les différentes vues de l'application en utilisant des templates situés dans le répertoire "templates". Un template ou 'gabarit' est un fichier php qui génère une partie de la structure XHTML d'une page. 
@@ -12,105 +19,49 @@ Les formulaires de toutes les vues générées enverront leurs données vers la 
 */
 
 
-	include_once "C:\wamp64\www\on2ixv1\libs\maLibUtils.php";
-	include_once "C:\wamp64\www\on2ixv1\libs\maLibBootstrap.php";
+	include_once "./libs/maLibUtils.php";
+	include_once "./libs/maLibBootstrap.php";
 
 
 
-	// on récupère le paramètre view éventuel 
-	$view = valider("view"); 
-	/* valider automatise le code suivant :
-	if (isset($_GET["view"]) && $_GET["view"]!="")
-	{
-		$view = $_GET["view"]
-	}*/
-
-	// S'il est vide, on charge la vue accueil par défaut
-	//if (!$view) $view = "C:\wamp64\www\On2ixV1/templates\accueil.php"; 
-
-	// NB : il faut que view soit défini avant d'appeler l'entête
-
-	// Dans tous les cas, on affiche l'entete, 
-	// qui contient les balises de structure de la page, le logo, etc. 
-	// Le formulaire de recherche ainsi que le lien de connexion 
-	// si l'utilisateur n'est pas connecté 
-
-	include("C:\wamp64\www\on2ixv1/templates/header.php");
-
-	// En fonction de la vue à afficher, on appelle tel ou tel template
-	switch($view)
-	{		
-
-		case "accueil" : 
-			include("templates/accueil.php");
-		break;
-			
-		case "article" : 
-			include("templates/article.php");
-		break;
-			
-		case "bague" : 
-			include("templates/bague.php");
-		break;
-			
-		case "facture" : 
-			include("templates/facture.php");
-		break;
-			
-		case "favoris" : 
-			include("templates/favoris.php");
-		break;
-			
-		case "login" : 
-			include("templates/login.php");
-		break;
-			
-		case "panier" : 
-			include("templates/panier.php");
-		break;
-			
-		case "quiSommesNous" : 
-			include("templates/quiSommesNous.php");
-		break;
-			
-		case "serviceClient" : 
-			include("templates/serviceClient.php");
-		break;
-			
-		case "surMesure" : 
-			include("templates/surMesure.php");
-		break;
-		
-
-		default : // si le template correspondant à l'argument existe, on l'affiche
-			if (file_exists("templates/$view.php"))
-				include("templates/$view.php");
-
-	}
-
-
-	// Dans tous les cas, on affiche le pied de page
-	// Qui contient les coordonnées de la personne si elle est connectée
+	
 ?>
 
 <div class="container-fluid">
     <div class="row px-5">
         <div class="col-md-7">
             <div class="shopping-cart">
-                <h6>Mon Panier</h6>
+                <div class= "u-textCenter">
+                      <h6>MON PANIER</h6>
+                </div>
+                <style type="text/css">
+                .u-textCenter {
+                                text-align: center !important;
+                            }
+                </style>
                 <hr>
 
+                <style type="text/css">
+                    h6{
+                        font-weight: 900;
+                    }
+                </style>
                  <form action="panier.php" method="get" class="cart-items">
                     <div class="border rounded">
                         <div class="row bg-white">
                             <div class="col-md-3 pl-0">
-                                <img src="C:\wamp64\www\On2ixV1\ressources\logoIG2I.png"  class="img-fluid">
+                                <img src="./ressources/product1.png"  class="img-fluid">
                             </div>
+                            <style type="text/css">
+                                img{
+                                    border-radius: 8px;
+                                }
+                            </style>
                             <div class="col-md-6">
                                 <h5 class="pt-2">product1</h5>
-                                <small class="text-secondary">Seller: dailytuition</small>
+                                <small class="text-secondary">reference</small>
                                 <h5 class="pt-2">555$</h5>
-                                <button type="submit" class="btn btn-warning">Save for Later</button>
+                                <button type="submit" class="btn btn-danger mx-2">Save for Later</button>
                                 <button type="submit" class="btn btn-danger mx-2" name="remove">Remove</button>
                             </div>
                             <div class="col-md-3 py-5">
@@ -175,6 +126,8 @@ Les formulaires de toutes les vues générées enverront leurs données vers la 
                         <h6>Delivery Charges</h6>
                         <hr>
                         <h6>Amount Payable</h6>
+                        <hr>
+                        <button type="submit" class="btn btn-danger mx-2" name="remove">Continuez vers la livraison</button>
                     </div>
                     <div class="col-md-6">
                         <h6>$<?php echo $total; ?></h6>
@@ -191,28 +144,6 @@ Les formulaires de toutes les vues générées enverront leurs données vers la 
     </div>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 </body>
 </html>
-<?php
-
-
-
-
-
-
-
-//C'est la propriété php_self qui nous l'indique : 
-// Quand on vient de index : 
-// [PHP_SELF] => /chatISIG/index.php 
-// Quand on vient directement par le répertoire templates
-// [PHP_SELF] => /chatISIG/templates/accueil.php
-
-// Si la page est appelée directement par son adresse, on redirige en passant pas la page index
-// Pas de soucis de bufferisation, puisque c'est dans le cas où on appelle directement la page sans son contexte
-
-// Bouton ajouter panier 
-/*<a href="panier.php?action=ajout&amp;1=<?php echo $s->title; ?>&amp;q=1&amp;p=<?php echo $s->price; ?>"> ajouter panier</a>*/
-?>
