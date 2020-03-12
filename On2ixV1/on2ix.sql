@@ -20,21 +20,50 @@ SET time_zone = "+00:00";
 --
 -- Structure de la table `bijoux`
 --
+
 CREATE TABLE `bijoux` (
-	`id` int(11) NOT NULL,
-	`titre` varchar(255)  NOT NULL,
-	`popularite` int(1) DEFAULT 0,
-	`prix` float(20) NOT NULL,
-	`poids` float(20) NOT NULL,
-	`alliage` varchar(255) NOT NULL,
-	`pierre` varchar(255) NOT NULL,
-	`genre` char(1) ,
-	`taille` float(20) NOT NULL,
-	`purete` varchar(5) ,
-	`source` varchar(255) NOT NULL,
-	`codeArticle` varchar(255) NOT NULL,
-	CONSTRAINT PK_bijoux PRIMARY KEY(id)
-);
+  `id` int(11) NOT NULL,
+  `titre` varchar(255) NOT NULL,
+  `popularite` int(1) DEFAULT '0',
+  `prix` float NOT NULL,
+  `poids` float NOT NULL,
+  `alliage` varchar(255) NOT NULL,
+  `pierre` varchar(255) NOT NULL,
+  `genre` char(1) DEFAULT NULL,
+  `taille` float NOT NULL,
+  `purete` varchar(5) DEFAULT NULL,
+  `source` varchar(255) NOT NULL,
+  `codeArticle` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `bijoux`
+--
+
+INSERT INTO `bijoux` (`id`, `titre`, `popularite`, `prix`, `poids`, `alliage`, `pierre`, `genre`, `taille`, `purete`, `source`, `codeArticle`) VALUES
+(1, 'Bague solitaire or blanc', 1, 2000, 3.7, 'or rose', 'rond', 'F', 7.6, '3.8', 'ressources/images/0,30_carat_bague_solitaire_or_blanc_1.jpg', '0,30 carat bague solitaire or blanc Bague 1'),
+(2, 'Bague solitaire or jaune', 0, 1000, 3.7, 'or rose', 'rond', 'F', 7.6, '1', 'ressources/images/0,30_carat_bague_solitaire_or_jaune_1.jpg', '0,30 carat bague solitaire or jaune Bague 1'),
+(3, 'Bague solitaire or rose', 1, 6000, 3.7, 'or blanc', 'rond', 'U', 7.6, '2.5', 'ressources/images/0,30_carat_bague_solitaire_or_rose_1.jpg', '0,30 carat bague solitaire or rose Bague 1');
+
+--
+-- Index pour les tables exportées
+--
+
+--
+-- Index pour la table `bijoux`
+--
+ALTER TABLE `bijoux`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT pour les tables exportées
+--
+
+--
+-- AUTO_INCREMENT pour la table `bijoux`
+--
+ALTER TABLE `bijoux`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Structure de la table `users`
@@ -171,15 +200,3 @@ ALTER TABLE `archive`
   ADD CONSTRAINT `FK_archive_commande` FOREIGN KEY (`idCommande`) REFERENCES `commande` (`id`);
 
 
---
--- Contraintes pour la table `image`
---
-ALTER TABLE `image`
-  ADD CONSTRAINT `FK_image` FOREIGN KEY (`idBijoux`) REFERENCES `bijoux` (`id`) ;
-  
-  
-  
-INSERT INTO `bijoux` (`id`, `titre`, `popularite`, `prix`, `poids`, `alliage`, `pierre`, `genre`, `taille`, `purete`, `source`, `codeArticle`) VALUES
-(1, 'Bague solitaire or blanc', 0, 1116, 3.7, 'or blanc', 'rond', 'F', 7.6, '0,30', 'ressources/images/0,30_carat_bague_solitaire_or_blanc_1.png', '0,30 carat bague solitaire or blanc Bague 1'),
-(2, 'Bague solitaire or jaune', 0, 1272, 3.7, 'or jaune', 'rond', 'F', 7.6, '0,30', 'ressources/images/0,30_carat_bague_solitaire_or_jaune_1.png', '0,30 carat bague solitaire or jaune Bague 1'),
-(3, 'Bague solitaire or rose', 0, 1116, 3.7, 'or rose', 'rond', 'F', 7.6, '0,30', 'ressources/images/0,30_carat_bague_solitaire_or_rose_1.png', '0,30 carat bague solitaire or rose Bague 1');
