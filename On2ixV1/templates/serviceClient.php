@@ -26,7 +26,7 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php")
 <body>
 	<div class="container">
 	  <h1 class="titre">Service Client</h1>
-	  <div class="imgCover" style="background-image:url(img/besoinConseils.jpg)">
+	  <div class="imgCover" style="background-image:url(ressources/qSN_sC_sM/besoinConseils.jpg)">
 			<div class="au-dessus">
 
 
@@ -42,9 +42,9 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php")
 	  </div>
 		<div class="row">
 
-		  <div class="col-xs-12 col-sm-6 col-md-3">
+		  <div class="col-xs-12 col-sm-6 col-md-3 lead">
 				<div class="divImg">
-					<img class="img-responsive" src="img/mail.png">
+					<img class="img-responsive" src="ressources/qSN_sC_sM/mail.png">
 				</div>
 			  <h2 class="sous-titre">Nous envoyer un mail</h2>
 			  <div class="cadre">
@@ -54,21 +54,21 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php")
 			  </div>
 		  </div>
 
-		  <div class="col-xs-12 col-sm-6 col-md-3">
+		  <div class="col-xs-12 col-sm-6 col-md-3 lead">
 				<div class="divImg">
-					<img class="img-responsive" src="img/tel.png">
+					<img class="img-responsive" src="ressources/qSN_sC_sM/tel.png">
 				</div>
 				<h2 class="sous-titre">Appeler le XXXXXXXXXX</h2>
 			  <div class="cadre">
-				  <p>Souhaitez-vous parler à quelqu'un directement?
+				  <p >Souhaitez-vous parler à quelqu'un directement?
 				  Appelez notre bureau et parlez directement à votre
 				  conseiller personnel de bijoux en diamant.</p>
 			  </div>
 		  </div>
 
-		  <div class="col-xs-12 col-sm-6 col-md-3">
+		  <div class="col-xs-12 col-sm-6 col-md-3 lead">
 				<div class="divImg">
-					<img class="img-responsive" src="img/tchat.png">
+					<img class="img-responsive" src="ressources/qSN_sC_sM/tchat.png">
 				</div>
 				<h2 class="sous-titre">Support chat</h2>
 			  <div class="cadre">
@@ -79,9 +79,9 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php")
 			  </div>
 		  </div>
 
-		  <div class="col-xs-12 col-sm-6 col-md-3">
+		  <div class="col-xs-12 col-sm-6 col-md-3 lead">
 				<div class="divImg">
-					<img class="img-responsive" src="img/whatsapp.png">
+					<img class="img-responsive" src="ressources/qSN_sC_sM/whatsapp.png">
 				</div>
 				<h2 class="sous-titre">Contactez-nous sur XXXX</h2>
 			  <div class="cadre">
@@ -91,7 +91,7 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php")
 			  </div>
 		  </div>
 	</div>
-
+</div>
 </body>
 
 </html>
