@@ -127,7 +127,7 @@ Les formulaires de toutes les vues générées enverront leurs données vers la 
                         <hr>
                         <h6>Amount Payable</h6>
                         <hr>
-                        <button type="submit" class="btn btn-danger mx-2" name="remove">Continuez vers la livraison</button>
+                        <a href="./templates/facture.php"><button type="submit" class="btn btn-danger mx-2" name="remove">Continuez vers la livraison</button></a>
                     </div>
                     <div class="col-md-6">
                         <h6>$<?php echo $total; ?></h6>
