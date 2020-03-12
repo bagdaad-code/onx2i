@@ -1,0 +1,145 @@
+.maNav
+{
+  background-color: #b6a573;
+}
+
+.barre
+{
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-light .navbar-nav .nav-link
+{
+  font-size: 120%;
+  color: white;
+}
+
+.navbar-light .navbar-nav .nav-link:hover
+{
+  color: white;
+  background-color: #6d071a;
+}
+
+.btn
+{
+  background-color: #6d071a;
+}
+
+.btn:hover
+{
+  background-color: crimson;
+}
+
+.categories
+{
+  margin-left: 10%;
+}
+
+.barreSearch
+{
+  width: 100%;
+}
+
+.butLoupe
+{
+  margin-right: 10%;
+  width: 10%;
+}
+
+#loupe
+{
+  width: 100%;
+}
+
+/**********************************IMAGE SLIDER********************************************/
+.carousel-item
+{
+    height: 70vh; !important
+}
+
+.carousel-item img
+{
+    height: 70vh; !important
+}
+
+/**********************************PRESENTATION********************************************/
+.row
+{
+  margin-top: 2%;
+  border-color: lightgrey;
+}
+
+.texte1 /**Pour le texte de la premiere img de manequin**/
+{
+  margin-top: 6vh;
+}
+
+.texte2 /**Pour le texte de la deuxieme img de manequin**/
+{
+  margin-top: 8vh;
+}
+
+.photoWomen
+{
+  width: 100%;
+}
+
+/**********************************AVIS********************************************/
+.sectionAvis
+{
+  background-color:  	#F5F5F5;
+  align-items: center;
+}
+
+.avis
+{
+  text-align: center;
+}
+
+.espaceavis
+{
+  margin-top: -1%;
+}
+
+.divAvis
+{
+  flex: 0 0 32%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: 1%;
+  background-color: white;
+}
+
+.titreAvis
+{
+  margin-top: 2%;
+  font-size: 180%;
+  text-align: center;
+  color: #b6a573;
+}
+
+.etoiles
+{
+  text-align: center;
+  color: orange;
+}
+
+.btnAvis
+{
+  display: block;
+  margin: auto;
+  margin-bottom: 1%;
+}
+
+.avisSami
+{
+  text-align: center;
+}
+
+
+
+footer
+{
+  background-color: #b6a573;
+}

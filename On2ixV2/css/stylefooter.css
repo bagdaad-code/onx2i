@@ -1,0 +1,43 @@
+.para
+{
+  color:white;
+  line-height: 25px;
+}
+
+.titre2,.titre3
+{
+  color: white;
+}
+
+.footer-top
+{
+  background-color: #111;
+}
+
+.segment-one,.titre3
+{
+  font-family: arial;
+  color:white;
+  letter-spacing: 3px;
+  margin: 10px 0;
+}
+
+.segment-two,.titre2
+{
+  color: white;
+  font-family: Poppins;
+  text-transform: uppercase;
+}
+
+.segment-two,.titre2:before
+{
+  content: "|";
+  color: #c65039;
+  padding-right: 10px;
+}
+
+.segment-two ul li
+{
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  line-height: 45px;
+}

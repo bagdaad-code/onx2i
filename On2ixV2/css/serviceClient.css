@@ -1,0 +1,40 @@
+p{
+text-align:center;
+}
+
+.divImg{
+  display:flex;
+  justify-content:center;
+}
+.titre{
+display:flex;
+justify-content:center;
+}
+
+.imgCover{
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+display:flex;
+justify-content:left;
+min-height:200px;
+
+}
+.au-dessus{
+margin-right:60%;
+}
+
+.sous-titre{
+display:flex;
+justify-content:center;
+}
+
+.cadre{
+display:flex;
+justify-content:center;
+border:2px solid black;
+}
+
+[class*="col"] { margin-top: 20px; }
+img { width: 20%;
+text-align:center; }
