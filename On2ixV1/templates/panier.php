@@ -61,7 +61,9 @@ Les formulaires de toutes les vues générées enverront leurs données vers la 
                                 <h5 class="pt-2">product1</h5>
                                 <small class="text-secondary">reference</small>
                                 <h5 class="pt-2">555$</h5>
-                                <button type="submit" class="btn btn-danger mx-2">Save for Later</button>
+				    <a href="./templates/favoris.php">
+				    <button type="submit" class="btn btn-danger mx-2">Save for Later</button>
+				    </a>
                                 <button type="submit" class="btn btn-danger mx-2" name="remove">Remove</button>
                             </div>
                             <div class="col-md-3 py-5">
