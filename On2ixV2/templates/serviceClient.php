@@ -27,7 +27,7 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php")
 
 			<h2 class="sous-titre">Besoin de conseils?</h2>
 		  <div class="cadre">
-			  <p>SAMI emploie tous les moyens possibles pour
+			  <p class="parag">SAMI emploie tous les moyens possibles pour
 			  guider ses clients lors de leurs achats. Notre
 			  équipe de conseillers en bijoux en diamants se
 			  fera un plaisir de vous aider dans votre recherche
@@ -39,11 +39,11 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php")
 
 		  <div class="col-xs-12 col-sm-6 col-md-3 lead">
 				<div class="divImg">
-					<img class="img-responsive" src="ressources/qSN_sC_sM/mail.png">
+					<img class="img-responsive image_sC" src="ressources/qSN_sC_sM/mail.png">
 				</div>
 			  <h2 class="sous-titre">Nous envoyer un mail</h2>
 			  <div class="cadre">
-				  <p>Démarrez une conversation pour recevoir de
+				  <p class="parag">Démarrez une conversation pour recevoir de
 				  l’assistance concernant votre achat.
 				  Envoyez-nous vos questions.</p>
 			  </div>
@@ -51,11 +51,11 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php")
 
 		  <div class="col-xs-12 col-sm-6 col-md-3 lead">
 				<div class="divImg">
-					<img class="img-responsive" src="ressources/qSN_sC_sM/tel.png">
+					<img class="img-responsive image_sC" src="ressources/qSN_sC_sM/tel.png">
 				</div>
 				<h2 class="sous-titre">Appeler le XXXXXXXXXX</h2>
 			  <div class="cadre">
-				  <p >Souhaitez-vous parler à quelqu'un directement?
+				  <p class="parag" >Souhaitez-vous parler à quelqu'un directement?
 				  Appelez notre bureau et parlez directement à votre
 				  conseiller personnel de bijoux en diamant.</p>
 			  </div>
@@ -63,11 +63,11 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php")
 
 		  <div class="col-xs-12 col-sm-6 col-md-3 lead">
 				<div class="divImg">
-					<img class="img-responsive" src="ressources/qSN_sC_sM/tchat.png">
+					<img class="img-responsive image_sC" src="ressources/qSN_sC_sM/tchat.png">
 				</div>
 				<h2 class="sous-titre">Support chat</h2>
 			  <div class="cadre">
-				  <p>Chattez avec nos conseillers en bijoux en
+				  <p class="parag">Chattez avec nos conseillers en bijoux en
 				  diamant pour un traitement direct de votre demande.
 				  Vous pouvez trouver le bouton de chat dans le coin
 				  inférieur gauche.</p>
@@ -76,11 +76,11 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php")
 
 		  <div class="col-xs-12 col-sm-6 col-md-3 lead">
 				<div class="divImg">
-					<img class="img-responsive" src="ressources/qSN_sC_sM/whatsapp.png">
+					<img class="img-responsive image_sC" src="ressources/qSN_sC_sM/whatsapp.png">
 				</div>
 				<h2 class="sous-titre">Contactez-nous sur XXXX</h2>
 			  <div class="cadre">
-				  <p>Commencez une conversation en chat avec nous
+				  <p class="parag">Commencez une conversation en chat avec nous
 				  sur WhatsApp pour une réponse rapide à vos questions:
 				  +32474076034.</p>
 			  </div>
