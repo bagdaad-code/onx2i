@@ -53,7 +53,7 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php")
 				<img class="img-responsive image_qSN" src="ressources/qSN_sC_sM/mail.png">
 			</div>
 		  <div class="col-xs-12 col-sm-6 col-md-6 lead">
-			  <h2 class="sous-titre">La différence Sami DeLaBarre</h2>
+			  <h2 class="sous-titre">La différence Sami Delebarre</h2>
 			  <div class="cadre">
 				  <p class="parag">Découvrez les bagues de fiançailles de luxe et les
 				  bijoux en diamant de Sami. Dans notre bijouterie à
@@ -67,7 +67,7 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php")
 				    <p class="parag">Vous désirez admirer votre bijou de vos propres yeux ?
 				    Prenez rendez-vous dans nos showrooms. Nos bijouteries en
 				    Belgique (à Anvers), en France (à Paris, à Nice), en Suisse
-				    (à Zürich, à Genève), à Halluin binks et à l'international se
+				    (à Zürich, à Genève), à Halluin et à l'international se
 				    situent dans des quartiers diamantaires distingués. Lors de
 				    votre achat d’un bijou en diamant, vous recevrez des conseils
 				     professionnels. Notre service est toujours personnel et
@@ -80,18 +80,8 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php")
 		  <div class="col-xs-12 col-sm-6 col-md-6 lead">
 			  <h2 class="sous-titre">A propos de Sami DLB</h2>
 			  <div class="cadre">
-				  <p class="parag">BAU euh SAMI DLB, la bijouterie en ligne fondée en 2008 en Belgique,
-				   est connue pour ses bagues serties de diamants, boucles d’oreilles
-				    et bague de fiançailles de luxe. Nous pouvons offrir des prix
-				    attractifs grâce à notre modèle économique efficace. Notre marque
-				    est née en ligne, ce qui nous a permis de rapidement acquérir une
-				    place à l’échelle mondiale.</p>
-				    <p class="parag">Nous vendons des bijoux en diamant en ligne ou dans nos
-				    bijouteries physiques (à Paris et à Nice en France). Grâce à
-				     un système de production efficace, géré par des diamantaires
-				     et des orfèvres expérimentés, nous sommes en mesure de livrer
-				     la plupart de nos bijoux en diamant sous 7 jours, toujours dans
-				      le respect d’une qualité supérieure. </p>
+				  <p class="parag">orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+				    <p class="parag">orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum </p>
 			  </div>
 		  </div>
 			<div class="col-xs-12 col-sm-6 col-md-6 lead">
@@ -118,7 +108,7 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php")
 				   sertie d’un diamant solitaire parfaite, ou vos bijoux en
 				    diamant intemporels. Et si vous n'êtes pas satisfait à
 				    100%, vous avez 30 jours pour changer d'avis. Que dire
-				    de plus ? A part que SAMIIIIIII. </p>
+				    de plus ?. </p>
 			  </div>
 		  </div>
 		</div>

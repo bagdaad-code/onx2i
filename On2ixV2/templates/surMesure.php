@@ -38,7 +38,7 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php")
 	<title>Sur Mesure</title>
 	<meta charset="UTF-8">
 	<link href="css/serviceClient.css" rel="stylesheet">
-	<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+	<!--<link href="bootstrap/css/bootstrap.css" rel="stylesheet">-->
   <script src="js/surMesure.js"></script>
 </head>
 

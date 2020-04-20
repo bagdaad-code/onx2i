@@ -15,7 +15,7 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php")
 <title>Service Client</title>
 <meta charset="UTF-8">
 <link href="css/serviceClient.css" rel="stylesheet">
-<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+
 </head>
 
 <body>
