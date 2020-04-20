@@ -37,11 +37,11 @@ justify-content:center;
 /*border:2px solid black;*/
 }
 
-[class*="col"] { margin-top: 20px; }
+[class*="col"] 
 .image_sC { width: 20%;
 text-align:center; }
 
 
-[class*="col"] { margin-top: 20px; }
+[class*="col"] 
 .image_qSN { width: 70%;
 text-align:center; }
