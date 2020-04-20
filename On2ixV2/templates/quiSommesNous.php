@@ -39,7 +39,6 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php")
 	<title>Qui Sommes Nous?</title>
 	<meta charset="UTF-8">
 	<link href="css/serviceClient.css" rel="stylesheet">
-	<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
 	<style type="text/css">
 
 	    </style>
